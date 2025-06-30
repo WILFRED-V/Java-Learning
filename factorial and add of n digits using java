@@ -1,0 +1,31 @@
+//Mutliplication of digits
+
+import java.util.*;
+public class Main{
+    static void print(int i,int sum){
+        if(i<1){
+            System.out.print(sum);
+            return;
+        }
+        print(i-1,sum*i);
+    }
+    public static void main(String[]args){
+        print(6,1);
+    }
+}
+
+// addition of digits
+
+import java.util.*;
+public class Main{
+    static void print(int i,int sum){
+        if(i<1){
+            System.out.print(sum);
+            return;
+        }
+        print(i-1,sum+i);
+    }
+    public static void main(String[]args){
+        print(6,0);
+    }
+}
