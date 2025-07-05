@@ -1,0 +1,37 @@
+//consecutive order 
+
+import java.util.*;
+public class Main{
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        int arr[] = {4,3,2,9,5,6};
+        int a[] = new int[arr.length];
+        for(int i=0;i<arr.length;i++){
+            a[i]=arr[i];
+        }
+        
+        Arrays.sort(a);
+        
+        int num = a[0];
+        boolean iscon = true;
+        
+        for(int i=0;i<arr.length;i++){
+            if(a[i]!=num){
+                iscon = false;
+                break;
+            }
+            else{
+                num++;
+            }
+            
+            
+        }
+        if(iscon){
+            System.out.println("Array contains consecutive numbers: 1");
+        }
+        else{
+             System.out.println("NOT contain consecutive numbers: 0");
+        }
+        
+    }
+}
