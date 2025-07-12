@@ -1,0 +1,36 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        int arr[] = {-2, -3, 4, -1, -2, 1, 5, -3};
+        int n = arr.length;
+
+        int maxi = arr[0];
+        int sum = arr[0];
+
+        int start = 0;
+        int end = 0;
+        int tempStart = 0;
+
+        for (int i = 1; i < n; i++) {
+            if (sum < 0) {
+                sum = arr[i];
+                tempStart = i;
+            } else {
+                sum += arr[i];
+            }
+
+            if (sum > maxi) {
+                maxi = sum;
+                start = tempStart;
+                end = i;
+            }
+        }
+
+        System.out.println("Maximum Sum: " + maxi);
+        System.out.print("Subarray: ");
+        for (int i = start; i <= end; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
